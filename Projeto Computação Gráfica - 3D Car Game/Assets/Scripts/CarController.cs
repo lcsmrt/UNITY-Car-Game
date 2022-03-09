@@ -16,7 +16,8 @@ public class CarController : MonoBehaviour
     private Rigidbody rgdbody;
     private Wheel[] wheels;
 
-    //wheels é um array e armazena as n rodas que o veículo possui.
+    //Ajusta o centro de massa do veículo
+    //wheels é um array que armazena as n rodas que o veículo possui
     void Start()
     {
         rgdbody = GetComponent<Rigidbody>();
@@ -24,7 +25,7 @@ public class CarController : MonoBehaviour
         wheels = GetComponentsInChildren<Wheel>();
     }
 
-    //Steer = SteerInput, Accelerator = AcceleratorInput, etc. Só passando os dados do InputManager pra essas variáveis.
+    //Passa os dados de controle do player para as variáveis abaixo
     private void Update()
     {
         foreach (var wheel in wheels)

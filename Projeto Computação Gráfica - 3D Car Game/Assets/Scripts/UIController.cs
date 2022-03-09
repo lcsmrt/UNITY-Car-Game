@@ -12,6 +12,7 @@ public class UIController : MonoBehaviour
     public Text UITextLastLap;
     public Text UITextBestLap;
 
+    //Especifica o Player
     public Player UpdateUIForPlayer;
 
     private int currentLap = 0;
@@ -26,24 +27,28 @@ public class UIController : MonoBehaviour
             return;
         }
 
+        //Qual é a volta atual
         if(UpdateUIForPlayer.CurrentLap != currentLap)
         {
             currentLap = UpdateUIForPlayer.CurrentLap;
             UITextCurrentLap.text = $"VOLTA: {currentLap}";
         }
 
+        //Tempo da volta atual, reinicia a cada volta
         if (UpdateUIForPlayer.CurrentLapTime != currentLapTime)
         {
             currentLapTime = UpdateUIForPlayer.CurrentLapTime;
             UITextTimer.text = $"TEMPO: {(int)currentLapTime / 60}:{(currentLapTime) % 60:00.000}";
         }
 
+        //Tempo da última volta
         if (UpdateUIForPlayer.LastLapTime != lastLapTime)
         {
             lastLapTime = UpdateUIForPlayer.LastLapTime;
             UITextLastLap.text = $"ÚLTIMA VOLTA: {(int)lastLapTime / 60}:{(lastLapTime) % 60:00.000}";
         }
 
+        //Tempo da melhor volta
         if (UpdateUIForPlayer.BestLapTime != bestLapTime)
         {
             bestLapTime = UpdateUIForPlayer.BestLapTime;

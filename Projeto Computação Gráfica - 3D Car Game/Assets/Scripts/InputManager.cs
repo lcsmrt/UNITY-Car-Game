@@ -19,4 +19,4 @@ public class InputManager : MonoBehaviour
         BrakeInput = Input.GetAxis(inputBrakeAxis);
     }
 }
-//SteerInput verifica e armazena se as teclas horizontais estão sendo pressionadas, AcceleratorleInput faz o mesmo mas com as verticais. Esse código só faz isso.
+//SteerInput verifica e armazena se as teclas horizontais estão sendo pressionadas, AcceleratorleInput faz o mesmo mas com as verticais. BrakeInput pega a tecla Espaço. Esse código só faz isso.

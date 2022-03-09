@@ -20,7 +20,7 @@ public class Player : MonoBehaviour
     private CarController carController;
 
 
-
+    //Tempos do player
     void Awake()
     {
         checkpointsParent = GameObject.Find("Checkpoints").transform;
@@ -69,6 +69,7 @@ public class Player : MonoBehaviour
         }
     }
 
+    //Pega os valores do InputManager e passa para as variáveis de controle do player
     void Update()
     {
         CurrentLapTime = lapTimer > 0 ? Time.time - lapTimer : 0;

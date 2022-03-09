@@ -23,7 +23,7 @@ public class Wheel : MonoBehaviour
         wheelTransform = GetComponentInChildren<MeshRenderer>().GetComponent<Transform>();
     }
 
-    //Atualiza a posição e rotação visual das rodas de acordo com a posição e rotação dos Wheel Colliders.
+    //Atualiza a posição e rotação visual das rodas de acordo com a posição e rotação dos Wheel Colliders
     void Update()
     {
         wheelCollider.GetWorldPose(out Vector3 pos, out Quaternion rot);
@@ -31,6 +31,7 @@ public class Wheel : MonoBehaviour
         wheelTransform.rotation = rot;
     }
 
+    //Aplica de fato as forças de torque (aceleração e freagem) e a angulação das rodas
     private void FixedUpdate()
     {
         if(steer)

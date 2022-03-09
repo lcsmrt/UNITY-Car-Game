@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+
 public class WaterPhysics : MonoBehaviour
 {
     private Vector3 buoyantForce = new Vector3();
@@ -28,5 +30,7 @@ public class WaterPhysics : MonoBehaviour
         }
     }
 }
+
+*/
 
 //Lembrete: Talvez se eu fizer um array de colliders e usar um foreach no lugar desse if fique melhor, vou testar depois.
